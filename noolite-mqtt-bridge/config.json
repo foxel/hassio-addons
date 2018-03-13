@@ -17,5 +17,6 @@
     "mqtt_port": "port",
     "mqtt_prefix": "str"
   },
+  "image": "foxel/hassio-noolite-mqtt-{arch}",
   "auto_uart": true
 }
