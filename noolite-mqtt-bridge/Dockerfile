@@ -2,7 +2,7 @@ ARG BUILD_FROM
 
 FROM $BUILD_FROM as git
 
-ENV UPSTREAM_VERSION='v0.0.1-py3'
+ENV UPSTREAM_VERSION='v0.0.2-py3'
 
 RUN apk add --no-cache git
 
