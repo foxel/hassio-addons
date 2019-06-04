@@ -7,7 +7,7 @@ ENV LANG=C.UTF-8
 # Install requirements for add-on
 RUN apk add --no-cache python3 jq
 
-RUN pip3 install noolite-mqtt==0.0.4
+RUN pip3 install noolite-mqtt==0.0.5
 
 COPY run.sh /
 
