@@ -9,5 +9,7 @@ mqtt_port=$(jq --raw-output ".mqtt_port" $CONFIG_PATH)
 mqtt_prefix=$(jq --raw-output ".mqtt_prefix" $CONFIG_PATH)
 username=$(jq --raw-output ".username" $CONFIG_PATH)
 password=$(jq --raw-output ".password" $CONFIG_PATH)
+devices=$(jq --raw-output ".devices" $CONFIG_PATH)
 
+noolite-mqtt-ha-discover "${mqtt_prefix}" "${mqtt_host}" "${username}" "${password}" -p "${mqtt_port}" -d "${devices}"
 exec noolite-mqtt "${serial_device}" "${mqtt_prefix}" "${mqtt_host}" "${username}" "${password}" -p "${mqtt_port}"

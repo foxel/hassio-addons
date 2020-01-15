@@ -1,6 +1,6 @@
 {
   "name": "NooLite MQTT",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "slug": "noolite_mqtt",
   "description": "NooLite MQTT bridge for MTRF-64",
   "startup": "services",
@@ -11,7 +11,8 @@
     "mqtt_port": "1883",
     "mqtt_prefix": "foxhome/noolite",
     "username": "",
-    "password": ""
+    "password": "",
+    "devices": []
   },
   "schema": {
     "serial_device": "str",
@@ -19,7 +20,12 @@
     "mqtt_port": "port",
     "mqtt_prefix": "str",
     "username": "str",
-    "password": "str"
+    "password": "str",
+    "devices": [{
+      "type": "list(pm112|pt111|pt112|pl111|ds1|ws1|sr1|su1|sb1|srf1|suf1|pxx|fox1)",
+      "channel": "int(0,63)",
+      "mode": "list(switch|light)?"
+    }]
   },
   "arch": ["armhf", "aarch64", "amd64", "i386"],
   "image": "foxel/hassio-noolite-mqtt-{arch}",
