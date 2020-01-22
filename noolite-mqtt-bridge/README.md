@@ -18,7 +18,8 @@ Add-on configuration example:
     "password": "",
     "devices": [
       {"type": "sb1", "channel": 1},
-      {"type": "sr1", "channel": 2, "mode": "light"}
+      {"type": "sr1", "channel": 2, "mode": "light"},
+      {"type": "pxx", "channel": 5, "channel2": 6, "mode": "button"}
     ]
 }
 ```
@@ -42,6 +43,11 @@ The add-on can use MQTT discovery to create devices in Home Assistant. One can c
  
 sr1, su1, sb1, srf1, suf1 devices can have optional "mode" attribute of either "switch" or "light", which controls
  corresponding Nome Assistant entity type discovered.  
+
+pxx device has "mode" of either "switch" or "button", where "switch" is used for "on"+"off" buttons mode on the
+ remote and "button" for the toggle button mode of the remote.
+ 
+pxx also has optional "channel2", "channel3", "channel4" to put up to 4 bound channels under one HA device.
 
 ## Binding
 ### TX bindind

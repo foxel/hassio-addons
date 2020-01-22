@@ -1,6 +1,6 @@
 {
   "name": "NooLite MQTT",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "slug": "noolite_mqtt",
   "description": "NooLite MQTT bridge for MTRF-64",
   "startup": "services",
@@ -24,7 +24,10 @@
     "devices": [{
       "type": "list(pm112|pt111|pt112|pl111|ds1|ws1|sr1|su1|sb1|srf1|suf1|pxx|fox1)",
       "channel": "int(0,63)",
-      "mode": "list(switch|light)?"
+      "mode": "list(switch|light|button)?",
+      "channel2": "int(0,63)?",
+      "channel3": "int(0,63)?",
+      "channel4": "int(0,63)?"
     }]
   },
   "arch": ["armhf", "aarch64", "amd64", "i386"],
