@@ -5,9 +5,9 @@ FROM $BUILD_FROM
 ENV LANG=C.UTF-8
 
 # Install requirements for add-on
-RUN apk add --no-cache python3 jq
+RUN apk add --no-cache python3 py3-pip jq
 
-RUN pip3 install noolite-mqtt==0.1.1
+RUN pip3 install noolite-mqtt==0.1.2
 
 COPY run.sh /
 

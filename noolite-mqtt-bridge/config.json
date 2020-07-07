@@ -1,6 +1,6 @@
 {
   "name": "NooLite MQTT",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "slug": "noolite_mqtt",
   "description": "NooLite MQTT bridge for MTRF-64",
   "startup": "services",
@@ -30,7 +30,7 @@
       "channel4": "int(0,63)?"
     }]
   },
-  "arch": ["armhf", "aarch64", "amd64", "i386"],
+  "arch": ["armhf", "aarch64", "armv7", "amd64", "i386"],
   "image": "foxel/hassio-noolite-mqtt-{arch}",
   "auto_uart": true
 }
