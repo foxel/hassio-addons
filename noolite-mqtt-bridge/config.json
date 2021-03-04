@@ -32,6 +32,5 @@
   },
   "arch": ["armhf", "aarch64", "armv7", "amd64", "i386"],
   "image": "foxel/hassio-noolite-mqtt-{arch}",
-  "uart": true,
-  "devices": ["/dev/ttyAMA0", "/dev/ttyS0"]
+  "uart": true
 }
