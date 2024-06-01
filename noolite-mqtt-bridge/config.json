@@ -30,7 +30,8 @@
       "channel4": "int(0,63)?"
     }]
   },
+  "init": false,
   "arch": ["armhf", "aarch64", "armv7", "amd64", "i386"],
-  "image": "foxel/hassio-noolite-mqtt-{arch}",
+  "image": "ghcr.io/foxel/hassio-addons/noolite-mqtt-{arch}",
   "uart": true
 }
